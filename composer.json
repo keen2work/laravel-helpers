@@ -1,0 +1,46 @@
+{
+  "name": "emedia/laravel-helpers",
+  "description": "Laravel Helper functions and static classes",
+  "type": "library",
+  "require": {
+    "php": "^7.2",
+    "illuminate/support": "^6.0|^7.0",
+    "illuminate/console": "^6.0|^7.0",
+    "illuminate/database": "^6.0|^7.0",
+    "emedia/php-helpers": "~2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@bitbucket.org:elegantmedia/php-helpers.git"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "src/global_functions/url_helpers.php",
+      "src/global_functions/array_helpers.php"
+    ],
+    "psr-4": {
+      "EMedia\\Helpers\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "EMedia\\Helpers\\HelpersServiceProvider"
+      ]
+    }
+  },
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Shane Perera",
+      "email": "shane@elegantmedia.com.au"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
